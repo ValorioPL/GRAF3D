@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <title>Spray Doom: NY’90s</title>
+  <style>
+    html,body{margin:0;background:#000;color:#ddd;font:14px/1.3 system-ui,Segoe UI,Arial}
+    .wrap{position:relative;width:960px;max-width:100%;margin:0 auto;padding:8px}
+    #view{width:960px;height:540px;display:block;background:#0a0f16;image-rendering:pixelated}
+    #minimap{position:absolute;right:12px;top:12px;width:200px;height:140px;background:rgba(0,0,0,.4)}
+    #hud{position:absolute;left:12px;top:12px;min-width:180px}
+    .bar{width:160px;height:10px;background:#333;border:1px solid #555;margin:2px 0 6px}
+    #hpFill{height:100%;background:#e74c3c;width:100%}
+    #sprayFill{height:100%;background:#3aa0ff;width:100%}
+    .overlay{position:absolute;inset:0;display:none;align-items:center;justify-content:center;
+             font-size:48px;background:rgba(0,0,0,.6)}
+    .overlay.show{display:flex}
+    details#help{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.5);padding:8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <canvas id="view" width="320" height="180"></canvas>
+    <canvas id="minimap" width="200" height="140"></canvas>
+
+    <div id="hud">
+      <div id="seedLabel">seed …</div>
+      <div>HP <span id="hpLabel">100</span></div>
+      <div class="bar"><div id="hpFill" style="width:100%"></div></div>
+      <div>Spray <span id="sprayLabel">100</span></div>
+      <div class="bar"><div id="sprayFill" style="width:100%"></div></div>
+      <div>Tagi <span id="tagDone">0</span>/<span id="tagNeed">0</span></div>
+      <div>FPS: <span id="fps">0</span></div>
+    </div>
+
+    <div id="win" class="overlay">WYGRANA</div>
+    <div id="lose" class="overlay">PRZEGRANA</div>
+
+    <details id="help" open>
+      <summary>Pomoc (H)</summary>
+      WASD – ruch • Q/E – obrót • Spacja/LPM – spray • (suger.) T – tag • P – pauza
+    </details>
+  </div>
+
+  <!-- ważne: defer -->
+  <script defer src="main.js"></script>
+</body>
+</html>

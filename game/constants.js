@@ -1,0 +1,9 @@
+const TILE = 1.0;
+const PLAYER_RADIUS = 0.25;
+const FOV = Math.PI * 0.66;
+const MOVE_SPEED = 2.2, STRAFE_SPEED = 2.0, ROT_SPEED = 2.3;
+const SPRAY_RANGE = 3.0, SPRAY_ANGLE = Math.PI/8;
+const CAR_RADIUS = 0.35, NPC_RADIUS = 0.25;
+const STUN_TIME = 2.5;
+const DAMAGE_FROM_CAR = 10, DAMAGE_FROM_COP_TOUCH = 6;
+const ROAD_SPEED_MULT = 1.1;
